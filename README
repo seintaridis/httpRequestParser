@@ -1,5 +1,6 @@
 
 (1)
+The jar is inside out/ folder
 To run the program I add two more parameters that read the user and the password for database so you should run for example:
 
 java -cp "parser.jar" com.ef.Parser --accesslog=/path/to/file --startDate=2017-01-01.13:00:00 --duration=hourly --threshold=100 --user=root --pass=root
