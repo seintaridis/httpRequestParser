@@ -1,4 +1,4 @@
-package com.company;
+package com.ef.Parser;
 
 import java.io.IOException;
 import java.nio.charset.Charset;

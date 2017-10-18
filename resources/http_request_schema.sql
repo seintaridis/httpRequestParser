@@ -12,3 +12,10 @@ user_agent VARCHAR(500) NOT NULL,
 req_date TIMESTAMP NOT NULL
 
 );
+
+
+CREATE TABLE log_block_request(
+  ip VARCHAR(500) NOT NULL,
+  duration VARCHAR(100) NOT NULL,
+  threashold VARCHAR(100) NOT NULL
+);

@@ -1,0 +1,42 @@
+
+(1)
+To run the program I add two more parameters that read the user and the password for database so you should run for example:
+
+java -cp "parser.jar" com.ef.Parser --accesslog=/path/to/file --startDate=2017-01-01.13:00:00 --duration=hourly --threshold=100 --user=root --pass=root
+
+
+(2)
+
+CREATE TABLE http_request (
+
+id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+ip VARCHAR(500) NOT NULL,
+request VARCHAR(100) NOT NULL,
+status VARCHAR(30) NOT NULL,
+user_agent VARCHAR(500) NOT NULL,
+req_date TIMESTAMP NOT NULL
+
+);
+
+
+CREATE TABLE log_block_request(
+  ip VARCHAR(500) NOT NULL,
+  duration VARCHAR(100) NOT NULL,
+  threashold VARCHAR(100) NOT NULL
+);
+
+
+(3)
+Sql example to test 
+
+
+SELECT ip
+FROM http_request
+WHERE req_date>='2017-01-01.13:00:00.0'
+      AND req_date< '2017-01-01.14:00:00.0'
+GROUP BY ip having count(*) > 100;
+
+
+select * from log_block_request;
+
+

@@ -1,4 +1,4 @@
-package com.company;
+package com.ef.Parser;
 
 import java.sql.Timestamp;
 
